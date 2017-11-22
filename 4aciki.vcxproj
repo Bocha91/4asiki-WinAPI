@@ -156,6 +156,10 @@
       <DeploymentContent>true</DeploymentContent>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="exe\Часики32.exe" />
+    <None Include="exe\Часики64.exe" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

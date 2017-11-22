@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="exe">
+      <UniqueIdentifier>{c8fef034-7107-47d3-ad20-8e4aa65cabf0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -33,5 +36,13 @@
     <ResourceCompile Include="Resource.rc">
       <Filter>Файлы ресурсов</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="exe\Часики32.exe">
+      <Filter>exe</Filter>
+    </None>
+    <None Include="exe\Часики64.exe">
+      <Filter>exe</Filter>
+    </None>
   </ItemGroup>
 </Project>
