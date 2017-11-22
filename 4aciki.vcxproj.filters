@@ -45,4 +45,9 @@
       <Filter>exe</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Font Include="exe\digital-7_mono.ttf">
+      <Filter>exe</Filter>
+    </Font>
+  </ItemGroup>
 </Project>

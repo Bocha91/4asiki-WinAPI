@@ -89,7 +89,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 HFONT hFont = NULL;
 HFONT hFontOld = NULL;
 BOOL AddFont = FALSE;
-const TCHAR *pFontFile = _T("digital-7_mono.ttf");
+const TCHAR *pFontFile = _T("digital-7_mono.ttf"); // чтобы шрифт работал положи его в папку из которой запускаеш эти часики
 const TCHAR *pFontName = _T("digital-7 mono");
 // --------------------------------------------------------------------------
 int CALLBACK EnumFontsProc
@@ -213,9 +213,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			// неизмененное значение, полученное от
 			// функции DefWindowProc
 			if (lRetVal == HTLEFT ||
-
 				lRetVal == HTBORDER ||
-
 				lRetVal == HTRIGHT ||
 				lRetVal == HTTOP ||
 				lRetVal == HTBOTTOM ||
@@ -225,9 +223,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 				lRetVal == HTBOTTOMLEFT
 				)
 			{
-
 				return lRetVal;
-				//return WM_SIZING;
 			}
 
 			// В противном случае возвращаем значение HTCAPTION, которое соответствует заголовку окна.
