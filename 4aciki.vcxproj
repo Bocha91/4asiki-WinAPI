@@ -159,6 +159,7 @@
   <ItemGroup>
     <None Include="exe\Часики32.exe" />
     <None Include="exe\Часики64.exe" />
+    <None Include="README" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="exe\digital-7_mono.ttf" />

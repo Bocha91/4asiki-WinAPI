@@ -44,6 +44,7 @@
     <None Include="exe\Часики64.exe">
       <Filter>exe</Filter>
     </None>
+    <None Include="README" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="exe\digital-7_mono.ttf">
