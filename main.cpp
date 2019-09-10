@@ -4,13 +4,16 @@
 #include <tchar.h> 
 #include <time.h>
 #include "resource.h"
+
+//#include "multimon.h"    
+
 // Global variables
 
 // The main window class name. 
-static TCHAR szWindowClass[] = _T("Часики на WinAPI"); 
+static const TCHAR szWindowClass[] = _T("Часики на WinAPI"); 
 // The string that appears in the application's title bar. 
 //static TCHAR szTitle[] = _T("Часики WinAPI");
-static TCHAR szTitle[] = _T("Часики на WinAPI");
+static const TCHAR szTitle[] = _T("Часики на WinAPI");
 //TCHAR iconName[] = _T("IDI_MYICON");
 
 HINSTANCE hInst;
@@ -65,16 +68,30 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		MessageBox(NULL, _T("Call to SetTimer failed!"), _T("Часики WinAPI"), NULL);
 	}
 */
+
 	// Получаем координаты окна Desktop.
 	// Это окно занимает всю поверхность экрана,
 	// и на нем расположены все остальные окна
-	GetWindowRect(GetDesktopWindow(), &rc);
+	//GetWindowRect(GetDesktopWindow(), &rc);
+
+    // многомониторная позиция
+    RECT rc;
+    rc.left     = GetSystemMetrics(SM_XVIRTUALSCREEN);
+    rc.right    = GetSystemMetrics(SM_CXVIRTUALSCREEN);
+    rc.top      = GetSystemMetrics(SM_YVIRTUALSCREEN);
+    rc.bottom   = GetSystemMetrics(SM_CYVIRTUALSCREEN);
+
 
 	// Передвигаем окно в правый верхний угол экрана
 	MoveWindow(hWnd,
 		rc.right - cxChar*8 -10,
 		rc.top + 0,
 		cxChar*8 +10, cyChar, TRUE);
+
+//    ClipOrCenterWindowToMonitor(hWnd,false);
+
+
+
 
 	// Main message loop:
 	MSG msg; 
